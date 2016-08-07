@@ -6,10 +6,13 @@ Table List is an experiment using Firebase, Twilio (for sending text messages) a
 
 
 **Pricing**
+<hr>
 ![Alt text](/pricing.png?raw=true "Pricing Table")
 
 **Login**
+<hr>
 ![Alt text](/login.png?raw=true "Login")
 
 **Customer List**
+<hr>
 ![Alt text](/customers.png?raw=true "Customer List")
