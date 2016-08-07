@@ -1,0 +1,246 @@
+/* app css stylesheet */
+body {
+	padding-top: 80px;
+  background-color: #d3d3d3;
+}
+.navbar.navbar-fixed-top.ng-scope {
+    box-shadow: 0px 5px 6px -6px #000;
+    background-color: #fff;
+}
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+.starter-template h1{
+	font-size: 63px;
+}
+
+.party-form {
+	margin-bottom: 20px;
+}
+
+.prices{
+  margin-top: 10%;
+}
+
+
+
+
+
+.login-container{
+    position: relative;
+    width: 300px;
+    margin: 80px auto;
+    padding: 20px 40px 40px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+#output{
+    position: absolute;
+    width: 300px;
+    top: -75px;
+    left: 0;
+    color: #fff;
+}
+
+#output.alert-success{
+    background: rgb(25, 204, 25);
+}
+
+#output.alert-danger{
+    background: rgb(228, 105, 105);
+}
+
+
+.login-container::before,.login-container::after{
+    content: "";
+    position: absolute;
+    width: 100%;height: 100%;
+    top: 3.5px;left: 0;
+    background: #fff;
+    z-index: -1;
+    -webkit-transform: rotateZ(4deg);
+    -moz-transform: rotateZ(4deg);
+    -ms-transform: rotateZ(4deg);
+    border: 1px solid #ccc;
+
+}
+
+.login-container::after{
+    top: 5px;
+    z-index: -2;
+    -webkit-transform: rotateZ(-2deg);
+     -moz-transform: rotateZ(-2deg);
+      -ms-transform: rotateZ(-2deg);
+
+}
+
+.avatar{
+    width: 100px;height: 100px;
+    margin: 10px auto 30px;
+    border-radius: 100%;
+    border: 2px solid #aaa;
+    background-size: cover;
+}
+
+.form-box input{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    height:40px;
+    border: 1px solid #ccc;;
+    background: #fafafa;
+    transition:0.2s ease-in-out;
+
+}
+
+.form-box input:focus{
+    outline: 0;
+    background: #eee;
+}
+
+.form-box input[type="text"]{
+    border-radius: 5px 5px 0 0;
+    text-transform: lowercase;
+}
+
+.form-box input[type="password"]{
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
+}
+
+.form-box button.login{
+    margin-top:15px;
+    padding: 10px 20px;
+}
+
+
+
+
+
+.db-bk-color-one {
+  background-color: #ffffff;
+}
+
+.db-bk-color-two {
+  background-color: #ffffff;
+}
+
+.db-bk-color-three {
+  background-color: #ffffff;
+}
+
+
+
+/*============================================================
+PRICING STYLES
+==========================================================*/
+
+.db-padding-btm {
+  padding-bottom: 50px;
+}
+
+.db-button-color-square {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.50);
+  border: none;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  margin: 20px;
+}
+
+.db-button-color-square:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.50);
+  border: none;
+}
+
+.db-pricing-eleven {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  color: #fff;
+  line-height: 30px;
+}
+
+.db-pricing-eleven ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  padding-left: 0px;
+}
+
+.db-pricing-eleven ul li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  color: #46A6F7;
+}
+
+.db-pricing-eleven ul li i {
+  margin-right: 5px;
+}
+
+.db-pricing-eleven .price {
+  background-color: #FFFFFF;
+  padding: 40px 20px 20px 20px;
+  font-size: 60px;
+  font-weight: 900;
+  color: #46A6F7;
+}
+
+.db-pricing-eleven .price small {
+  color: #46A6F7;
+  display: block;
+  font-size: 12px;
+  margin-top: 22px;
+}
+
+.db-pricing-eleven 
+  .type-small {
+    background-color: #66ccff;
+    padding: 50px 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .type-medium {
+    background-color: #6699ff;
+    padding: 50px 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .type-large {
+    background-color: #6666ff;
+    padding: 50px 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+}
+.db-pricing-eleven .pricing-footer {
+  padding: 20px;
+}
+
+.db-attached > .col-lg-4,
+.db-attached > .col-lg-3,
+.db-attached > .col-md-4,
+.db-attached > .col-md-3,
+.db-attached > .col-sm-4,
+.db-attached > .col-sm-3 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.db-pricing-eleven.popular {
+  margin-top: 10px;
+}
+
+.db-pricing-eleven.popular .price {
+  padding-top: 80px;
+}

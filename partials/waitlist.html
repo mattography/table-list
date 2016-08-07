@@ -1,0 +1,47 @@
+<div class="container">
+<div class="alert alert-danger alert-dismissible fade in" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Note:</strong> Due to Zapier's recent lack of support for Firebase, Firebase and Twilio will no longer communicate (text messages won't be sent) <span class="glyphicon glyphicon-thumbs-down"></span>
+</div>
+<form ng-submit="saveParty()" class="form-inline party-form">
+	<div class="form-group">
+		<label class="sr-only" for="partyName">Party name</label>
+		<input ng-model="newParty.name" type="text" class="form-control" id="partyName" placeholder="Name" required="true">
+	</div>
+	<div class="form-group">
+		<label class="sr-only" for="phoneNumber">Phone number</label>
+		<input ng-model="newParty.phone" type="tel" class="form-control" id="phoneNumber" placeholder="Phone" required="true" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" minlength="10" maxlength="10">
+	</div>
+	<div class="form-group">
+		<label class="sr-only" for="sizeOfParty">Size of party</label>
+		<input ng-model="newParty.size" type="number" min="0" class="form-control" id="sizeOfParty" placeholder="Size of party" required="true">
+	</div>
+	<button type="submit" class="btn btn-primary">Add party</button>
+</form>
+
+<table class="table table-striped table-boredered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Party Size</th>
+			<th>Phone #</th>
+			<th>Customer Arrived</th>
+			<th>Customer Notified</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tr ng-repeat="party in parties | orderByPriority">
+		<td><p><strong>{{ party.name }}</strong></p></td>	
+		<td><p>{{ party.size }}</p></td>
+		<td><p>{{ party.phone }}</p></td>
+		<td><p>{{ party.time | date: "h:mma"}}</p></td>
+		<td><p>{{ party.notified}} {{party.notifiedTime | date:"h:mma"}}</p></td>
+		<td>
+			<button ng-click="sendTextMessage(party)" type="submit" class="btn btn-success">Send SMS</button>
+			<button ng-click="parties.$remove(party.$id)" type="submit" class="btn btn-danger">Remove</button>
+		</td>
+	</tr>
+</table>
+</div>
